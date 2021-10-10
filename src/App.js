@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Details_1 from './components/Details_1';
+import Details_2 from './components/Details_2'
+import {Switch, Route} from 'react-router-dom'
+
+import '@fortawesome/fontawesome-svg-core';
+// import '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/react-fontawesome'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/" component={Details_1} />
+        <Route exact path="/path_2" component={Details_2} />
+
+      </Switch>
+      {/* <Details /> */}
     </div>
   );
 }
